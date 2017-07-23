@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "WebReg+",
+  "description": "This extension integrates RateMyProfessor into WebReg for UCI",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "wrp.html",
+      "default_title": "Click here!"
+  },
+  "background": {
+      "scripts": ["jquery-3.1.1.min.js", "background.js"],
+      "persistent": false
+  },
+  "content_scripts": [
+  {
+    "matches": ["https://www.reg.uci.edu/*"],
+    "js": ["jquery-3.1.1.min.js", "content.js"]
+  }
+],
+    
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://ajax.googleapis.com/",
+    "https://www.reg.uci.edu/"
+  ]
+}
