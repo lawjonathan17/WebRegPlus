@@ -16,7 +16,6 @@
     {
       "all_frames": false,
       "matches": ["https://www.reg.uci.edu/*"],
-      "exclude_matches": [],
       "js": ["content.js"]
     }
   ]
