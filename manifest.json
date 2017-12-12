@@ -1,0 +1,23 @@
+{
+  "name": "WebSoc+",
+  "manifest_version": 2,
+  "description": "This extension adds a link to an instructor on RateMyProfessors.com next to their name on UC Irvine's Schedule of classes page.",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://ajax.googleapis.com/",
+    "https://www.reg.uci.edu/"
+  ],
+
+  "content_scripts": 
+  [
+    {
+      "all_frames": false,
+      "matches": ["https://www.reg.uci.edu/*"],
+      "exclude_matches": [],
+      "js": ["content.js"]
+    }
+  ]
+}
